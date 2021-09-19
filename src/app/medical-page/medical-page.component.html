@@ -1,0 +1,18 @@
+<app-header></app-header>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <mat-list role="list">
+      <mat-list-item role="listitem">Buscar paciente</mat-list-item>
+      <mat-list-item role="listitem" matBadgeOverlap="false">
+        <span matBadge="1" matBadgeOverlap="false">Respuesta a solicitud</span>
+      </mat-list-item>
+      <mat-list-item>Cerrar Sesión</mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <!--<app-patient-visualization></app-patient-visualization>-->
+    <!--<app-patient-notification></app-patient-notification>-->
+    <app-patient-medical-search></app-patient-medical-search>
+  </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

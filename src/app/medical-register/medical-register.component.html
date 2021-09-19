@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="formulario">
+    <h1>Registro Inicial de Médico</h1>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo de Identificación</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="document">
+              <mat-option *ngFor="let document of documents" [value]="document.value">
+                {{document.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>Documento de identidad</mat-label>
+            <input matInput placeholder="Documento de identidad">
+            <mat-icon matSuffix>badge</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="standard">
+            <mat-label>Contraseña sistema Rethus</mat-label>
+            <input matInput placeholder="Constraseña rethus">
+            <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Validar Existencia en Rethus</button>
+    </p>
+    <section>
+        <div class="example-button-row">
+          <button mat-raised-button color="primary">Registrar en HCE</button>
+          <button mat-raised-button color="warn">Cancelar</button>
+        </div>
+      </section>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="formulario">
+    <h1>Registro Inicial de Paciente</h1>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>Correo</mat-label>
+            <input matInput placeholder="Correo">
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="standard">
+            <mat-label>Documento</mat-label>
+            <input matInput placeholder="Documento">
+            <mat-icon matSuffix>badge</mat-icon>
+        </mat-form-field>
+    </p>
+    <!--Validacion si la persona que se esta registrando si es la que es-->
+    <p>
+        <mat-form-field appearance="standard">
+            <mat-label>Fecha de expedicion</mat-label>
+            <input matInput placeholder="Fecha de expedición">
+            <mat-icon matSuffix>calendar_today</mat-icon>
+        </mat-form-field>
+    </p>
+    <section>
+        <div class="example-button-row">
+          <button mat-raised-button color="primary">Aceptar</button>
+          <button mat-raised-button color="warn">Cancelar</button>
+        </div>
+      </section>
+</div>
+<app-footer></app-footer>

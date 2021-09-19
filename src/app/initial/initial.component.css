@@ -1,0 +1,21 @@
+.fixed-header {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 2;
+    width: 100% !important;
+    height: 60%;
+}
+
+.mat-toolbar.mat-primary {
+    background: #3f51d3;
+    color: #fff;
+  }
+
+.buttons{
+    position: absolute;
+    left:45%;
+    margin: 8px 8px 8px 0;
+}
+  
+
