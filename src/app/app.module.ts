@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
@@ -31,6 +32,23 @@ import { MedicalAddRegisterComponent } from './medical-add-register/medical-add-
 import { MedicalVisualizationComponent } from './medical-visualization/medical-visualization.component';
 import { MedicalSearchPatientComponent } from './medical-search-patient/medical-search-patient.component';
 import { MedicalSearchPatientTestsComponent } from './medical-search-patient-tests/medical-search-patient-tests.component';
+import { MedicalVisualMedicalRecordComponent } from './medical-visual-medical-record/medical-visual-medical-record.component';
+import { MedicalRecordEditionBarComponent } from './medical-record-edition-bar/medical-record-edition-bar.component';
+import { HcVisualizationComponent } from './hc-visualization/hc-visualization.component';
+import { HcConsultationComponent } from './hc-consultation/hc-consultation.component';
+import { HcEmergencyComponent } from './hc-emergency/hc-emergency.component';
+import { HcInmunizationComponent } from './hc-inmunization/hc-inmunization.component';
+import { HcTraumaComponent } from './hc-trauma/hc-trauma.component';
+import { HcHospitalizationComponent } from './hc-hospitalization/hc-hospitalization.component';
+import { HcBornInformationComponent } from './hc-born-information/hc-born-information.component';
+import { HcPathologicalComponent } from './hc-pathological/hc-pathological.component';
+import { HcSurgicalComponent } from './hc-surgical/hc-surgical.component';
+import { HcOccupationalComponent } from './hc-occupational/hc-occupational.component';
+import { HcTransfusionComponent } from './hc-transfusion/hc-transfusion.component';
+import { HcDrugIntoleranceComponent } from './hc-drug-intolerance/hc-drug-intolerance.component';
+import { HcAllergiesComponent } from './hc-allergies/hc-allergies.component';
+import { HcPersonalHabitsComponent } from './hc-personal-habits/hc-personal-habits.component';
+import { HcObstetricComponent } from './hc-obstetric/hc-obstetric.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +67,24 @@ import { MedicalSearchPatientTestsComponent } from './medical-search-patient-tes
     MedicalAddRegisterComponent,
     MedicalVisualizationComponent,
     MedicalSearchPatientComponent,
-    MedicalSearchPatientTestsComponent
+    MedicalSearchPatientTestsComponent,
+    MedicalVisualMedicalRecordComponent,
+    MedicalRecordEditionBarComponent,
+    HcVisualizationComponent,
+    HcConsultationComponent,
+    HcEmergencyComponent,
+    HcInmunizationComponent,
+    HcTraumaComponent,
+    HcHospitalizationComponent,
+    HcBornInformationComponent,
+    HcPathologicalComponent,
+    HcSurgicalComponent,
+    HcOccupationalComponent,
+    HcTransfusionComponent,
+    HcDrugIntoleranceComponent,
+    HcAllergiesComponent,
+    HcPersonalHabitsComponent,
+    HcObstetricComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +100,8 @@ import { MedicalSearchPatientTestsComponent } from './medical-search-patient-tes
     MatBadgeModule,
     MatTableModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

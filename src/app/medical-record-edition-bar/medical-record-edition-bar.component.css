@@ -1,0 +1,19 @@
+.header{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top:0%
+  }
+  
+  .header-button {
+      width: 100%;
+      float: left;
+      text-align: right;
+    }
+    
+    .header-button ul li {
+      display: inline-block;
+      list-style-type: none;
+      text-align: left;
+      
+    }
