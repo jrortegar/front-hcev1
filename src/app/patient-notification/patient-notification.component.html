@@ -1,45 +1,54 @@
-<div class="table">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<app-header></app-header>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <app-patient-menu></app-patient-menu>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="table">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-        <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
-      
-        <!-- Position Column -->
-        <ng-container matColumnDef="position">
-          <th mat-header-cell *matHeaderCellDef> No. </th>
-          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-        </ng-container>
-      
-        <!-- Name Column -->
-        <ng-container matColumnDef="peticion">
-          <th mat-header-cell *matHeaderCellDef> Peticion </th>
-          <td mat-cell *matCellDef="let element"> {{element.peticion}} </td>
-        </ng-container>
-      
-        <!-- Weight Column -->
-        <ng-container matColumnDef="medico">
-          <th mat-header-cell *matHeaderCellDef> Tiempo Restante </th>
-          <td mat-cell *matCellDef="let element"> {{element.tiempoRestante}} </td>
-        </ng-container>
-      
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="tiempoRestante">
-          <th mat-header-cell *matHeaderCellDef> Medico </th>
-          <td mat-cell *matCellDef="let element"> {{element.medico}} </td>
-        </ng-container>
+                <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
 
-        <ng-container matColumnDef="buscar">
-            <th mat-header-cell *matHeaderCellDef></th>
-            <td mat-cell *matCellDef="let element">
-                <div class="example-button-row">
-                    <button mat-raised-button>Buscar médico</button>
-                    <button mat-raised-button color="primary">Aceptar petición</button>
-                    <button mat-raised-button color="warn">Rechazar petición</button>
-                  </div>
-            </td>
-          </ng-container>
-      
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-</div>        
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="peticion">
+                    <th mat-header-cell *matHeaderCellDef> Peticion </th>
+                    <td mat-cell *matCellDef="let element"> {{element.peticion}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="medico">
+                    <th mat-header-cell *matHeaderCellDef> Tiempo Restante </th>
+                    <td mat-cell *matCellDef="let element"> {{element.tiempoRestante}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="tiempoRestante">
+                    <th mat-header-cell *matHeaderCellDef> Medico </th>
+                    <td mat-cell *matCellDef="let element"> {{element.medico}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="buscar">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let element">
+                        <div class="example-button-row">
+                            <button mat-raised-button>Buscar médico</button>
+                            <button mat-raised-button color="primary">Aceptar petición</button>
+                            <button mat-raised-button color="warn">Rechazar petición</button>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

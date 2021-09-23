@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,6 +50,19 @@ import { HcDrugIntoleranceComponent } from './hc-drug-intolerance/hc-drug-intole
 import { HcAllergiesComponent } from './hc-allergies/hc-allergies.component';
 import { HcPersonalHabitsComponent } from './hc-personal-habits/hc-personal-habits.component';
 import { HcObstetricComponent } from './hc-obstetric/hc-obstetric.component';
+import { MedicalMenuComponent } from './medical-menu/medical-menu.component';
+import { PatientMenuComponent } from './patient-menu/patient-menu.component';
+
+
+
+const routes: Routes = [
+  { path: 'home', component: InitialComponent},
+  { path: 'patient-page', component: PatientPageComponent},
+  { path: 'medical-page', component: MedicalPageComponent},
+  { path: 'medical-request-access', component: MedicalRequestAccessComponent},
+  { path: 'patient-visualization', component: PatientVisualizationComponent},
+  { path: 'patient-notification', component: PatientNotificationComponent},
+];
 
 @NgModule({
   declarations: [
@@ -84,10 +98,13 @@ import { HcObstetricComponent } from './hc-obstetric/hc-obstetric.component';
     HcDrugIntoleranceComponent,
     HcAllergiesComponent,
     HcPersonalHabitsComponent,
-    HcObstetricComponent
+    HcObstetricComponent,
+    MedicalMenuComponent,
+    PatientMenuComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     AppRoutingModule,
     MatToolbarModule,
     BrowserAnimationsModule,
@@ -106,4 +123,5 @@ import { HcObstetricComponent } from './hc-obstetric/hc-obstetric.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}
