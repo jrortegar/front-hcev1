@@ -12,6 +12,7 @@ interface Document {
 })
 export class MedicalRegisterComponent implements OnInit {
   selectedValue: string;
+  checked: boolean = false;
 
   documents: Document[] = [
     {value: 'cc-0', viewValue: 'CC'},
@@ -29,6 +30,15 @@ export class MedicalRegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  checkMedicalExistance(){
+    if(this.checked){
+      this.checked=false;
+    }
+    else{
+      this.checked=true;
+    }
   }
 
 }

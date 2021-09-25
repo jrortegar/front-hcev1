@@ -57,11 +57,15 @@ import { PatientMenuComponent } from './patient-menu/patient-menu.component';
 
 const routes: Routes = [
   { path: 'home', component: InitialComponent},
+  { path: 'patient-register', component: PatientRegisterComponent},
+  { path: 'medical-register', component: MedicalRegisterComponent},
   { path: 'patient-page', component: PatientPageComponent},
   { path: 'medical-page', component: MedicalPageComponent},
   { path: 'medical-request-access', component: MedicalRequestAccessComponent},
   { path: 'patient-visualization', component: PatientVisualizationComponent},
   { path: 'patient-notification', component: PatientNotificationComponent},
+  { path: 'activate', component: MedicalSearchPatientComponent},
+  { path: 'medical-visualization', component: MedicalVisualMedicalRecordComponent},
 ];
 
 @NgModule({

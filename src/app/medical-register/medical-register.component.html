@@ -5,11 +5,11 @@
         <mat-form-field appearance="fill">
             <mat-label>Tipo de Identificación</mat-label>
             <mat-select [(ngModel)]="selectedValue" name="document">
-              <mat-option *ngFor="let document of documents" [value]="document.value">
-                {{document.viewValue}}
-              </mat-option>
+                <mat-option *ngFor="let document of documents" [value]="document.value">
+                    {{document.viewValue}}
+                </mat-option>
             </mat-select>
-          </mat-form-field>
+        </mat-form-field>
     </p>
     <p>
         <mat-form-field appearance="legacy">
@@ -24,13 +24,14 @@
             <input matInput placeholder="Constraseña rethus">
             <mat-icon matSuffix>lock</mat-icon>
         </mat-form-field>
-        <button mat-raised-button color="primary">Validar Existencia en Rethus</button>
+        <button mat-raised-button color="primary" (click)="checkMedicalExistance()" *ngIf="!checked">Validar Existencia en Rethus</button>
+        <mat-icon matSuffix *ngIf="checked">done</mat-icon>
     </p>
     <section>
         <div class="example-button-row">
-          <button mat-raised-button color="primary">Registrar en HCE</button>
-          <button mat-raised-button color="warn">Cancelar</button>
+            <button mat-raised-button color="primary" [routerLink]="'/medical-page'">Registrar en HCE</button>
+            <button mat-raised-button color="warn" [routerLink]="'/home'">Cancelar</button>
         </div>
-      </section>
+    </section>
 </div>
 <app-footer></app-footer>

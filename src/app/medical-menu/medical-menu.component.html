@@ -1,8 +1,8 @@
 <mat-list role="list">
-    <mat-list-item role="listitem" [routerLink]="'/patient-page'">Activar historia clínica</mat-list-item>
+    <mat-list-item role="listitem" [routerLink]="'/activate'">Activar historia clínica</mat-list-item>
     <mat-list-item role="listitem" [routerLink]="'/medical-request-access'">Solicitar acceso a HC</mat-list-item>
     <mat-list-item role="listitem" matBadgeOverlap="false">
-        <span matBadge="1" matBadgeOverlap="false">Respuesta a solicitud</span>
+        <span matBadge="1" matBadgeOverlap="false" [routerLink]="'/medical-visualization'">Respuesta a solicitud</span>
     </mat-list-item>
-    <mat-list-item>Cerrar Sesión</mat-list-item>
+    <mat-list-item [routerLink]="'/home'">Cerrar Sesión</mat-list-item>
 </mat-list>

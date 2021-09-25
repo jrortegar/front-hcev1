@@ -1,1 +1,11 @@
-<app-medical-record-edition-bar></app-medical-record-edition-bar>
+<app-header></app-header>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <app-medical-menu></app-medical-menu>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-medical-record-edition-bar></app-medical-record-edition-bar>
+        <app-hc-consultation></app-hc-consultation>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
