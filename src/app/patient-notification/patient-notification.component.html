@@ -38,7 +38,7 @@
                     <th mat-header-cell *matHeaderCellDef></th>
                     <td mat-cell *matCellDef="let element">
                         <div class="example-button-row">
-                            <button mat-raised-button>Buscar médico</button>
+                            <button mat-raised-button (click)="openDialog()">Buscar médico</button>
                             <button mat-raised-button color="primary">Aceptar petición</button>
                             <button mat-raised-button color="warn">Rechazar petición</button>
                         </div>

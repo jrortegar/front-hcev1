@@ -10,12 +10,10 @@
 .mat-toolbar.mat-primary {
     background: #3f51d3;
     color: #fff;
-  }
-
-.buttons{
-    position: absolute;
-    left:45%;
-    margin: 8px 8px 8px 0;
 }
-  
 
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+    position: relative;
+    left: 225%;
+}
