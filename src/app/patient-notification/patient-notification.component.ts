@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog} from '@angular/material/dialog';
+import { PatientMedicalSearchComponent } from '../patient-medical-search/patient-medical-search.component';
 
 export interface Notification {
   peticion: string;
@@ -22,9 +24,20 @@ export class PatientNotificationComponent implements OnInit {
   displayedColumns: string[] = ['position', 'peticion', 'medico', 'tiempoRestante', 'buscar'];
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog(): void{
+    const dialogRef = this.dialog.open(
+      PatientMedicalSearchComponent, {
+        width:'450px',
+        data: {document: this.dataSource[0].medico}
+      });
+      dialogRef.afterClosed().subscribe(result=>{
+        console.log('dialog closed');
+      });
   }
 
 }

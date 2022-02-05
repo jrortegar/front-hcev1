@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>Doc. {{data.document}}</h1>
+<div mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Primer nombre</mat-label>
+        <input matInput [(ngModel)]="data.firstName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Segundo nombre</mat-label>
+        <input matInput [(ngModel)]="data.secondName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Primer apellido</mat-label>
+        <input matInput [(ngModel)]="data.lastName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Segundo apellido</mat-label>
+        <input matInput [(ngModel)]="data.lastLastName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Sexo</mat-label>
+        <input matInput [(ngModel)]="data.sex">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Estado civil</mat-label>
+        <input matInput [(ngModel)]="data.maritalStatus">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Fecha de nacimiento</mat-label>
+        <input matInput [(ngModel)]="data.birthDay">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Edad</mat-label>
+        <input matInput [(ngModel)]="data.age">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Ocupación</mat-label>
+        <input matInput [(ngModel)]="data.ocupation">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Dirección</mat-label>
+        <input matInput [(ngModel)]="data.address">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Telefono</mat-label>
+        <input matInput [(ngModel)]="data.phone">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Ciudad</mat-label>
+        <input matInput [(ngModel)]="data.city">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Seguro</mat-label>
+        <input matInput [(ngModel)]="data.secure">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Tipo de vinculacion</mat-label>
+        <input matInput [(ngModel)]="data.vinculation">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button>No Thanks</button>
+    <button mat-button>Ok</button>
+</div>

@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge'; 
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -21,6 +23,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { PatientRegisterComponent } from './patient-register/patient-register.component';
 import { PatientPageComponent } from './patient-page/patient-page.component';
 import { PatientVisualizationComponent } from './patient-visualization/patient-visualization.component';
@@ -36,6 +39,7 @@ import { MedicalSearchPatientTestsComponent } from './medical-search-patient-tes
 import { MedicalVisualMedicalRecordComponent } from './medical-visual-medical-record/medical-visual-medical-record.component';
 import { MedicalRecordEditionBarComponent } from './medical-record-edition-bar/medical-record-edition-bar.component';
 import { HcVisualizationComponent } from './hc-visualization/hc-visualization.component';
+import { HcActivateComponent } from './hc-activate/hc-activate.component';
 import { HcConsultationComponent } from './hc-consultation/hc-consultation.component';
 import { HcEmergencyComponent } from './hc-emergency/hc-emergency.component';
 import { HcInmunizationComponent } from './hc-inmunization/hc-inmunization.component';
@@ -105,7 +109,8 @@ const routes: Routes = [
     HcPersonalHabitsComponent,
     HcObstetricComponent,
     MedicalMenuComponent,
-    PatientMenuComponent
+    PatientMenuComponent,
+    HcActivateComponent
   ],
   imports: [
     BrowserModule,
@@ -123,7 +128,9 @@ const routes: Routes = [
     MatTableModule,
     MatSelectModule,
     FormsModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

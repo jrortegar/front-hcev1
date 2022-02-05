@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog} from '@angular/material/dialog';
+import { HcActivateComponent } from '../hc-activate/hc-activate.component';
+
+
 
 export interface InactivePatient {
   documento: string;
@@ -20,8 +24,9 @@ export class MedicalSearchPatientComponent implements OnInit {
   displayedColumns: string[] = ['documento', 'contrato' ,'acciones'];
   dataSource = ELEMENT_DATA;
   showContent:boolean;
+  document: string="";
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
     this.showContent=false;
    }
 
@@ -35,6 +40,17 @@ export class MedicalSearchPatientComponent implements OnInit {
     else{
       this.showContent=true;
     }
+  }
+
+  openDialog(): void{
+    const dialogRef = this.dialog.open(
+      HcActivateComponent, {
+        width:'450px',
+        data: {document: this.dataSource[0].documento}
+      });
+      dialogRef.afterClosed().subscribe(result=>{
+        console.log('dialog closed');
+      });
   }
 
 }
