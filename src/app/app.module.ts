@@ -56,6 +56,7 @@ import { PatientMenuComponent } from './patient-menu/patient-menu.component';
 
 
 const routes: Routes = [
+  { path:'', component:InitialComponent},
   { path: 'home', component: InitialComponent},
   { path: 'patient-register', component: PatientRegisterComponent},
   { path: 'medical-register', component: MedicalRegisterComponent},
