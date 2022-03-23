@@ -8,12 +8,12 @@
 }
 
 .mat-toolbar.mat-primary {
-    background: #3f51d3;
+    background: #3f45f0;
     color: #fff;
 }
 
 .example-button-row .mat-button-base {
     margin: 8px 8px 8px 0;
     position: relative;
-    left: 225%;
+    left: 160%;
 }
